@@ -1,16 +1,26 @@
+import { FaGraduationCap, FaGlobe, FaCertificate, FaUniversity } from "react-icons/fa";
+
 export default function Educacion() {
   return (
     <section className="py-12 bg-gradient-to-r from-[#C8C8E8] to-[#E8E8F8] px-8 md:px-16 lg:px-24">
-      <h2 className="text-3xl font-archivo text-[#0A0258] mb-8">
-        EDUCACIÓN
-      </h2>
+      <div className="flex items-center gap-3 mb-8">
+        <div className="p-2 bg-gradient-to-r from-[#0A0258] to-[#494296] rounded-lg">
+          <FaGraduationCap className="text-white text-xl" />
+        </div>
+        <h2 className="text-3xl font-archivo text-[#0A0258]">
+          EDUCACIÓN
+        </h2>
+      </div>
 
       <div className="mb-12">
         <div className="bg-white/90 rounded-xl p-5 border border-[#0A0258] flex items-center justify-between hover:shadow-xl transition-shadow duration-300">
           <div className="flex-1">
-            <h3 className="text-lg font-roboto font-bold text-gray-800">
-              INSTITUTO TECNOLÓGICO DE MORELIA
-            </h3>
+            <div className="flex items-center gap-2 mb-2">
+              <FaUniversity className="text-[#0A0258] text-lg" />
+              <h3 className="text-lg font-roboto font-bold text-gray-800">
+                INSTITUTO TECNOLÓGICO DE MORELIA
+              </h3>
+            </div>
             <p className="text-base font-roboto text-gray-700">
               INGENIERÍA EN SISTEMAS COMPUTACIONALES
             </p>
@@ -34,9 +44,14 @@ export default function Educacion() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div>
-          <h3 className="text-2xl font-archivo text-[#0A0258] mb-6">
-            IDIOMAS
-          </h3>
+          <div className="flex items-center gap-3 mb-6">
+            <div className="p-2 bg-gradient-to-r from-[#0A0258] to-[#494296] rounded-lg">
+              <FaGlobe className="text-white text-lg" />
+            </div>
+            <h3 className="text-2xl font-archivo text-[#0A0258]">
+              IDIOMAS
+            </h3>
+          </div>
           
           <div className="space-y-3">
             <div className="bg-white/90 rounded-lg p-4 border border-[#0A0258] hover:shadow-lg transition-shadow duration-300">
@@ -60,11 +75,16 @@ export default function Educacion() {
         </div>
 
         <div>
-          <h3 className="text-2xl font-archivo text-[#0A0258] mb-6">
-            CERTIFICACIONES
-          </h3>
+          <div className="flex items-center gap-3 mb-6">
+            <div className="p-2 bg-gradient-to-r from-[#0A0258] to-[#494296] rounded-lg">
+              <FaCertificate className="text-white text-lg" />
+            </div>
+            <h3 className="text-2xl font-archivo text-[#0A0258]">
+              CERTIFICACIONES
+            </h3>
+          </div>
           
-          <div className="bg-white/50 backdrop-blur-sm rounded-lg p-6 border border-[#0A0258] border-dashed  transition-shadow duration-300">
+          <div className="bg-white/50 backdrop-blur-sm rounded-lg p-6 border border-[#0A0258] border-dashed transition-shadow duration-300">
             <p className="text-sm font-robotoRegular text-gray-500 text-center italic">
               Certificaciones próximamente...
             </p>

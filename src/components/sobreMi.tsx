@@ -23,12 +23,14 @@ export default function SobreMi() {
         </p>
       </div>
 
-      <div className="relative w-56 h-56 rounded-full p-1 bg-gradient-to-r from-[#5A4BFF] to-[#139BFC]">
+      <div className="relative w-56 h-56 rounded-full p-1 bg-gradient-to-r from-[#5A4BFF] to-[#139BFC] hover:scale-105 hover:rotate-3 transition-all duration-300 ease-in-out cursor-pointer group">
         <img
-          src="/mi-foto.jpg"
+          src="src\images\profile.jpg"
           alt="Foto de Diego Soria"
-          className="w-full h-full object-cover rounded-full"
+          className="w-full h-full object-cover rounded-full group-hover:brightness-110 transition-all duration-300"
         />
+       
+        
       </div>
     </section>
   );
