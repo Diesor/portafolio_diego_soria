@@ -5,7 +5,6 @@ export default function SideMenu({ open, setOpen }) {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ 
-        behavior: 'smooth',
         block: 'center'
       });
       setOpen(false);

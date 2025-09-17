@@ -8,9 +8,7 @@ const proyectos = [
     subtitulo: "Aplicación web",
     fecha: "Marzo - Junio 2025",
     descripcion: "Sistema de gestión de proyectos para concursos.",
-    tecnologias: ["React", "Node.js", "Tailwind CSS", "Mysql"],
-    github: "https://github.com/usuario/sgi-project",
-    demo: "https://sgi-project-demo.netlify.app"
+    tecnologias: ["React", "Node.js", "Tailwind CSS", "MySQL"],
   },
   {
     id: 2,
@@ -19,8 +17,6 @@ const proyectos = [
     fecha: "En desarrollo",
     descripcion: "Sistema de adopción de mascotas.",
     tecnologias: ["Vue.js", "Supabase", "Tailwind CSS", "Hoppscotch"],
-    github: "https://github.com/usuario/petbook",
-    demo: null
   }
 ];
 
@@ -40,7 +36,7 @@ export default function Proyectos() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
         {proyectos.map((proyecto) => (
           <div key={proyecto.id} className="relative">
-            <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 pb-12 border border-white/30  transition-all duration-300">
+            <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 pb-12 border border-white/30">
               <div className="text-center">
                 <h3 className="text-2xl font-roboto font-bold text-white mb-2">
                   {proyecto.titulo}
@@ -55,27 +51,20 @@ export default function Proyectos() {
 
               <button
                 onClick={() => toggleExpansion(proyecto.id)}
-                className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-[#5A4BFF] to-[#139BFC] hover:bg-blue-600 rounded-full p-3 shadow-lg transition-all duration-300 hover:shadow-xl"
+                className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-[#5A4BFF] to-[#139BFC] hover:bg-blue-600 rounded-full p-3 shadow-lg"
               >
                 <ChevronDown 
-                  className={`w-6 h-6 text-white transition-transform duration-300 ${
-                    expandido === proyecto.id ? 'rotate-180' : ''
-                  }`}
+                  className={`w-6 h-6 text-white ${expandido === proyecto.id ? 'rotate-180' : ''}`}
                 />
               </button>
             </div>
 
-            <div className={`overflow-hidden transition-all duration-500 ease-in-out ${
-              expandido === proyecto.id 
-                ? 'max-h-96 opacity-100 mt-8' 
-                : 'max-h-0 opacity-0'
-            }`}>
+            <div className={`${expandido === proyecto.id ? 'block mt-8' : 'hidden'}`}>
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                 <p className="text-white/90 font-robotoRegular mb-4 leading-relaxed">
                   {proyecto.descripcion}
                 </p>
 
-           
                 <div className="mb-4">
                   <h4 className="text-white font-roboto  font-bold mb-2">Tecnologías:</h4>
                   <div className="flex flex-wrap gap-2">
@@ -89,8 +78,6 @@ export default function Proyectos() {
                     ))}
                   </div>
                 </div>
-
-               
               </div>
             </div>
           </div>

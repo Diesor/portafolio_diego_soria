@@ -1,7 +1,7 @@
 import { useState } from "react";
 import SideMenu from "./components/sideMenu";
 import SobreMi from "./components/sobreMi";
-import Tecnologias from "./components/carruselTech";
+import Tecnologias from "./components/tecnologias";
 import Experiencia from "./components/experiencia";
 import Proyectos from "./components/proyectos";
 

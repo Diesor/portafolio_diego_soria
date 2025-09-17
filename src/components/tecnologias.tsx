@@ -73,42 +73,25 @@ export default function Tecnologias() {
         TECNOLOGÍAS
       </h2>
 
-      <div className="w-full overflow-hidden relative">
-        <div className="flex gap-3 animate-marquee">
-          {[...tecnologias, ...tecnologias].map((tech, index) => (
+      <div className="w-full relative px-12 lg:px-24">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 justify-items-center">
+          {tecnologias.map((tech, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-40 h-40 bg-white/25 border border-white/30  rounded-lg flex flex-col items-center justify-center p-4"
+              className="w-32 h-32 bg-white/25 border border-white/30 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform"
             >
               <img
                 src={tech.logo}
                 alt={tech.titulo}
-                className="w-24 h-24 mb-2"
+                className="w-20 h-20 mb-2 object-contain"
               />
-              <span className="text-white font-roboto font-semibold">
+              <span className="text-white font-roboto font-semibold text-center text-sm">
                 {tech.titulo}
               </span>
             </div>
           ))}
         </div>
       </div>
-
-      {/* Tailwind no trae keyframes por defecto, se agregan así */}
-      <style jsx>{`
-        @keyframes marquee {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-        .animate-marquee {
-          display: flex;
-          animation: marquee 40s linear infinite;
-          width: max-content;
-        }
-      `}</style>
     </section>
   );
 }
